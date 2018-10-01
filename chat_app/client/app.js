@@ -1,7 +1,7 @@
 var socket = io();
 $('form').on('submit',function() {
-    var initial = 
-    var text = $('#message').val();
+    var text = $('#initials').val() + " says: " + $('#message').val();
+    
     socket.emit('message', text);
     $('message').val('');
     return false;
