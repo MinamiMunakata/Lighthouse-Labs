@@ -1,5 +1,6 @@
 var socket = io();
 $('form').on('submit',function() {
+    var initial = 
     var text = $('#message').val();
     socket.emit('message', text);
     $('message').val('');
