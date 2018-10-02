@@ -12,6 +12,10 @@ main {
     padding: 20px;
 }
 
+h1 {
+    text-align: center;
+}
+
 ol {
     list-style: none;
     margin-bottom: 20px;

@@ -5,7 +5,8 @@ socket.emit('login');
 $('form').on('submit',function() {
     var text = $('#initials').val() + " says: " + $('#message').val();
     socket.emit('message', text);
-    $('message').val('');
+    $('#message').val('');
+    $('#initials').val('');
     return false;
 });
 
