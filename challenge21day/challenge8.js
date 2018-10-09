@@ -23,6 +23,6 @@ function lightCell(coordinates) {
     return GRID[coordinates[1] - 1][convertColumn(coordinates)];
 }
 
-function isRock(coordinates) {
-    return lightCell(coordinates) === "^";
+function isCurrent(coordinates) {
+    return lightCell(coordinates) === "~";
 }
