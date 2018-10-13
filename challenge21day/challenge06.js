@@ -19,6 +19,7 @@ function convertColumn(coordinates) {
     return alph.indexOf(coordinates[0]);
 }
 
+// fixed lightCell(coordinates) to the one can take the number of rows more than 2 digits.
 function lightCell(coordinates) {
-    return GRID[coordinates[1] - 1][convertColumn(coordinates)];
+    return GRID[coordinates.substring(1)  - 1][convertColumn(coordinates)];
 }
