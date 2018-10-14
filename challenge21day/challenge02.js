@@ -14,5 +14,3 @@ const GRID = [
 function countColumns() {
     return GRID[0].length;
 }
-
-console.log(countColumns());
