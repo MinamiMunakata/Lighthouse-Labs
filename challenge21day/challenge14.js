@@ -28,17 +28,17 @@ function lightCell(coordinates) {
     return GRID[coordinates.substring(1)  - 1][convertColumn(coordinates)];
 }
 
-function isCurrent(coordinates) {
-    return lightCell(coordinates) === "~";
+function isShip(coordinates) {
+    return lightCell(coordinates) === "v";
 }
 
-function allCurrents() {
+function allShips() {
     let array = [];
     let index = 0;
     for (let row = 1; row <= countRows(); row++) {
         for (const col in alph) {
             const coordinates = alph[col] + row;
-            if (isCurrent(coordinates)) {
+            if (isShip(coordinates)) {
                 array[index] = coordinates;
                 index++;
             }
@@ -47,21 +47,3 @@ function allCurrents() {
     return array;
 }
 
-function isRock(coordinates) {
-    return lightCell(coordinates) === "^";
-}
-
-function allRocks() {
-    let array = [];
-    let index = 0;
-    for (let row = 1; row <= countRows(); row++) {
-        for (const col in alph) {
-            const coordinates = alph[col] + row;
-            if (isRock(coordinates)) {
-                array[index] = coordinates;
-                index++;
-            }
-        }
-    }
-    return array;
-}
