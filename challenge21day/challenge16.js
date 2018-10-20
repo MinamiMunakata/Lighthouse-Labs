@@ -32,8 +32,6 @@ function isCurrent(coordinates) {
 }
 
 function firstCurrent() {
-    let array = [];
-    let index = 0;
     for (let row = 1; row <= countRows(); row++) {
         for (const col in alph) {
             const coordinates = alph[col] + row;
@@ -44,3 +42,5 @@ function firstCurrent() {
     }
     return null;
 }
+
+console.log(firstCurrent());
