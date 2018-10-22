@@ -42,5 +42,3 @@ function firstCurrent() {
     }
     return null;
 }
-
-console.log(firstCurrent());
